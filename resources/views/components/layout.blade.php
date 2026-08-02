@@ -8,7 +8,14 @@
 </head>
 
 <body>
+  <div>
+    <nav></nav>
 
+
+    <main>
+      {{$slot}}
+    </main>
+  </div>
 </body>
 
 </html>
