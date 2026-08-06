@@ -1,3 +1,5 @@
+@props(['job'])
+
 <x-panel>
     <div class="flex items-center gap-5">
 
@@ -5,15 +7,15 @@
 
         <div>
             <p class="text-sm text-gray-400 ">
-                Laracasts
+                {{ $job->employer->name }}
             </p>
 
             <h3 class="mt-1 text-1xl font-bold text-white group-hover:text-blue-400">
-                Video Producer
+                {{ $job->title }}
             </h3>
 
             <p class="mt-3 text-sm text-gray-400">
-                Full Time &bull; From $60,000
+                {{ $job->salary }}
             </p>
         </div>
 
@@ -32,9 +34,9 @@
         </div>
 
         <div class="flex gap-2">
-            <x-tag>Frontend</x-tag>
-            <x-tag>Backend</x-tag>
-            <x-tag>API</x-tag>
+            @foreach ($job->tags as $tag)
+                <x-tag :$tag size="small" />
+            @endforeach
         </div>
 
     </div>
