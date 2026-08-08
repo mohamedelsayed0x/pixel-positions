@@ -11,7 +11,7 @@
 
 <body class="font-sans bg-black text-white antialiased">
 
-    <div class="mx-auto min-h-screen max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto min-h-screen max-w-7xl px-6 lg:px-8 pb-20">
 
         <nav class="flex items-center justify-between border-b border-white/10 py-6">
 
