@@ -37,9 +37,11 @@ class RegisteredUserController extends Controller
 
         $user = User::create($userAttributes);
 
-        $employerAttributes['logo'] = $request->logo->store('logos');
 
-        $user->employer()->create($employerAttributes);
+        $user->employer()->create([
+            'name' => $employerAttributes['employer'],
+            'logo' => $request->logo->store('logos'),
+        ]);
 
         Auth::login($user);
 

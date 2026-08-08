@@ -29,10 +29,19 @@
             </div>
 
             <!-- CTA -->
-            <a href="#"
-                class="rounded-lg border border-white/15 px-5 py-2 text-sm font-semibold transition hover:border-blue-500 hover:bg-blue-500">
-                Post a Job
-            </a>
+            @auth
+                <a href="/jobs/create"
+                    class="rounded-lg border border-white/15 px-5 py-2 text-sm font-semibold transition hover:border-blue-500 hover:bg-blue-500">
+                    Post a Job
+                </a>
+            @endauth
+
+            @guest()
+                <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+                    <a href="/register" class="transition hover:text-blue-400">Sing Up</a>
+                    <a href="login" class="transition hover:text-blue-400">Log In</a>
+                </div>
+            @endguest
 
         </nav>
 
