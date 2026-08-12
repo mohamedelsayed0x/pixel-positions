@@ -11,7 +11,9 @@
             </p>
 
             <h3 class="mt-1 text-1xl font-bold text-white group-hover:text-blue-400">
-                {{ $job->title }}
+                <a href="{{ $job->url }}" target="_blank">
+                    {{ $job->title }}
+                </a>
             </h3>
 
             <p class="mt-3 text-sm text-gray-400">

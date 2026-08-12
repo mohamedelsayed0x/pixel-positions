@@ -9,7 +9,9 @@
 
     <div class="flex-1 text-center">
         <h3 class="text-xl font-bold text-white group-hover:text-blue-400">
-            {{ $job->title }}
+            <a href="{{ $job->url }}" target="_blank">
+                {{ $job->title }}
+            </a>
         </h3>
 
         <p class="mt-4 text-sm text-gray-300 font-bold">
