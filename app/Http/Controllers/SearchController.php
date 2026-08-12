@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Job;
+use Illuminate\Http\Request;
+
+class SearchController extends Controller
+{
+    public function __invoke()
+    {
+        $jobs = JoB::where('title', 'LIKE', '%' . request('q') . '%')->get();
+
+        return view('resultes', ['jobs' => $jobs]);
+    }
+}

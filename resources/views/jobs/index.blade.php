@@ -12,11 +12,9 @@
                 Search thousands of jobs from top companies.
             </p>
 
-            <form action="" class="mt-8">
-                <input type="text" placeholder="Web Developer..."
-                    class="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-white placeholder:text-gray-400 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20">
-            </form>
-
+            <x-forms.form action="/search">
+                <x-forms.input :label="false" name="q" placeholder="Web Developer..."></x-forms.input>
+            </x-forms.form>
         </section>
 
         {{-- ============================================================= --}}
