@@ -27,7 +27,7 @@
             @endforeach
         </div>
 
-        <x-employer-logo :width="42" />
+        <x-employer-logo :employer="$job->employer" :width="42" />
 
         {{-- <img src="https://placehold.co/42x42" alt="Company Logo" class="h-10 w-10 rounded-full border border-white/10"> --}}
     </div>

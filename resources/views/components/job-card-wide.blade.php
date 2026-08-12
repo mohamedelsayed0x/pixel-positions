@@ -3,7 +3,8 @@
 <x-panel>
     <div class="flex items-center gap-5">
 
-        <x-employer-logo />
+        <x-employer-logo :employer="$job->employer" :width="42" />
+
 
         <div>
             <p class="text-sm text-gray-400 ">
