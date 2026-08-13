@@ -34,6 +34,13 @@
                     class="rounded-lg border border-white/15 px-5 py-2 text-sm font-semibold transition hover:border-blue-500 hover:bg-blue-500">
                     Post a Job
                 </a>
+
+                <form method="POST" action="/logout">
+                    @csrf
+                    @method('DELETE')
+                    <button class="transition hover:text-blue-400">Log Out</button>
+                </form>
+
             @endauth
 
             @guest()
